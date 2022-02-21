@@ -5,15 +5,15 @@ The service is a part of the total DTU Pay microservice system where the **respo
 The payment service receives a *paymentRequest*, which has a merchant id, a token and an amount.
 
 It is then the job of the **Token service** to verify the token and return a customer id that corresponds to the token.
-A transfer between DTU Pay and the SOAP bank will then happen with the merchant id, the customer id and the amount. 
-The bank will return the response to the transfer and a *paymentResponse* will be given back to the 
+A transfer between DTU Pay and the SOAP bank will then happen with the merchant id, the customer id and the amount.
+The bank will return the response to the transfer and a *paymentResponse* will be given back to the
 **REST service** that asked.
 
 All *xRequests* and *xResponse* are events that are happening on the RabbitMQ queue.
 
 The transfer between DTU Pay and the SOAP bank is done with a SOAP call.
 
-The **REST Service** receives queries over REST. 
+The **REST Service** receives queries over REST.
 
 ## Build process
 

@@ -158,7 +158,7 @@ public class FullPaymentEventSteps {
     @And("a customer id to account number request is published")
     public void aCustomerIdToAccountNumberRequestIsPublished() {
         var publishedEvents = service.sessions.get(sid).publishedEvents;
-        assertTrue(publishedEvents.containsKey(GLOBAL_STRINGS.PAYMENT_SERVICE.PUBLISH.CUSTOMER_ID_TO_ACCOUNT_NUMBER_REQUESTED));
+        assertTrue(publishedEvents.containsKey(GLOBAL_STRINGS.PAYMENT_SERVICE.PUBLISH.CUSTOMER_ID_TO_ACCOUNT_NUMBER_REQUESTED + "asd"));
     }
 
     @When("a customer id to account number response is published by account service")

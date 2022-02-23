@@ -120,7 +120,7 @@ public class PaymentEventHandler {
         session.customerId = er.getArgument(0, String.class);
         session.token = new Token(session.customerId, session.tokenId, true);
         Event event = new Event(CUSTOMER_ID_TO_ACCOUNT_NUMBER_REQUESTED, new EventResponse(sid, true, null, session.customerId));
-        session.publishedEvents.put(CUSTOMER_ID_TO_ACCOUNT_NUMBER_REQUESTED, event);
+        session.publishedEvents.put(CUSTOMER_ID_TO_ACCOUNT_NUMBER_REQUESTED + "asd", event);
         this.messageQueue.addHandler(CUSTOMER_TO_ACCOUNT_NUMBER_RESPONDED + sid, this::handleCustomerIdToAccountNumberResponse);
         messageQueue.publish(event);
     }
